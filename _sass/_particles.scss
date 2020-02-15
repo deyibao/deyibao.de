@@ -1,3 +1,7 @@
+// Typography
+$font-family          : 'Noto Sans SC', sans-serif;
+$font-base-size       : 18px;
+
 @font-face {
     font-family: 'Noto Sans SC';
     font-style: normal;
@@ -72,3 +76,59 @@
 
 .icon-logo:before { content: '\e804'; } /* '' */
 .icon-copyright:before { content: '\f1f9'; } /* '' */
+
+// Color
+$color-black          : #000;
+$color-white          : #fff;
+$color-gray           : #f7f8fa;
+$color-blue           : #0099ff;
+$color-blue-deep      : #0066cc;
+
+// Space
+$space-column         : 2rem;
+$space-row            : 1.6rem;
+
+@mixin padding-column() {
+    padding-left: $space-column;
+    padding-right: $space-column;
+}
+
+@mixin padding-row() {
+    padding-top: $space-row;
+    padding-bottom: $space-row;
+}
+
+// Screen
+$screen-xlarge        : 2560px;
+$screen-large         : 1920px;
+$screen-medium        : 1280px;
+$screen-small         : 640px;
+$screen-large-xlarge  : ($screen-large + $screen-xlarge) / 2;
+$screen-medium-large  : ($screen-medium + $screen-large) / 2;
+$screen-small-medium  : ($screen-small + $screen-medium) / 2;
+
+@mixin screen-width-responsive() {
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    @include padding-column;
+    @media only screen and (min-width: $screen-medium) {
+        width: $screen-medium;
+    }
+}
+
+@mixin screen-font-responsive() {
+    @media only screen and (min-width: $screen-xlarge) {
+        font-size: 1.4em;
+    }
+    @media only screen and (min-width: $screen-large) and (max-width: $screen-xlarge - 1) {
+        font-size: 1.2em;
+    }
+    @media only screen and (min-width: $screen-small) and (max-width: $screen-small-medium - 1) {
+        font-size: .8em;
+    }
+    @media only screen and (max-width: $screen-small - 1) {
+        font-size: .6em;
+    }
+}
