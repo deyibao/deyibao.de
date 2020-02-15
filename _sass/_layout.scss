@@ -1,34 +1,5 @@
 * {
     margin: 0;
     padding: 0;
-}
-
-.content {
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: $column-space;
-    padding-right: $column-space;
-    @media only screen and (min-width: $screen-xlarge) {
-        width: calc(#{$screen-xlarge * .7} - #{$column-space * 2});
-    }
-    @media only screen and (min-width: $screen-large-xlarge) and (max-width: $screen-xlarge - 1) {
-        width: calc(#{$screen-large-xlarge * .75} - #{$column-space * 2});
-    }
-    @media only screen and (min-width: $screen-large) and (max-width: $screen-large-xlarge - 1) {
-        width: calc(#{$screen-large * .8} - #{$column-space * 2});
-    }
-    @media only screen and (min-width: $screen-medium-large) and (max-width: $screen-large - 1) {
-        width: calc(#{$screen-medium-large * .85} - #{$column-space * 2});
-    }
-    @media only screen and (min-width: $screen-medium) and (max-width: $screen-medium-large - 1) {
-        width: calc(#{$screen-medium * .9} - #{$column-space * 2});
-    }
-    @media only screen and (min-width: $screen-small-medium) and (max-width: $screen-medium - 1) {
-        width: calc(#{$screen-small-medium * .9} - #{$column-space * 2});
-    }
-    @media only screen and (min-width: $screen-small) and (max-width: $screen-small-medium - 1) {
-        width: calc(#{$screen-small * .9} - #{$column-space * 2});
-    }
+    box-sizing: border-box;
 }

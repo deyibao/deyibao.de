@@ -1,3 +1,13 @@
+@mixin column-padding() {
+    padding-left: $column-space;
+    padding-right: $column-space;
+}
+
+@mixin row-padding() {
+    padding-top: $row-space;
+    padding-bottom: $row-space;
+}
+
 @mixin clickable() {
     text-decoration: none;
     cursor: pointer;
@@ -20,4 +30,15 @@
     border-width: 1px;
     border-color: $color-blue;
     border-radius: 0.34em;
+}
+
+@mixin responsive-screen-width() {
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    @include column-padding;
+    @media only screen and (min-width: $screen-medium) {
+        width: $screen-medium;
+    }
 }

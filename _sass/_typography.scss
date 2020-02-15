@@ -129,12 +129,13 @@ section {
         }
 
         &--footer {
-            & > * {
-                line-height: 2em;
-            }
-
             &-logo {
                 font-size: 1.34em;
+                justify-content: flex-start;
+            }
+
+            &:not(&-logo) > * {
+                line-height: 2em;
             }
         }
     }
@@ -145,13 +146,21 @@ section {
 }
 
 .header {
+    @include responsive-screen-width;
+    @include column-padding;
     position: fixed;
-    width: 100%;
-    background-color: $color-white;
+    background-color: $color-gray;
+}
+
+.main {
+    @include responsive-screen-width;
+    @include column-padding;
 }
 
 .footer {
-    padding: $column-space 0;
+    @include responsive-screen-width;
+    @include column-padding;
+    @include row-padding;
     background-color: $color-gray;
 }
 
