@@ -129,7 +129,9 @@ section {
         }
 
         &--footer {
-            height: 2em;
+            & > * {
+                line-height: 2em;
+            }
 
             &-logo {
                 font-size: 1.34em;
@@ -140,6 +142,12 @@ section {
     &--last {
         margin-right: 0;
     }
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: $color-white;
 }
 
 .footer {
