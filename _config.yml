@@ -1,0 +1,17 @@
+# Info
+name: deyibao.de
+title: 德易保
+description: 保险易，生活益。
+url: https://deyibao.de
+
+# Data
+
+# Settings
+sass:
+  style: compressed
+permalink: /:categories/:title/
+exclude: [README.md, LICENSE.md, .gitignore, Gemfile, Gemfile.lock]
+
+# Plugins
+plugins:
+  - jekyll-sitemap

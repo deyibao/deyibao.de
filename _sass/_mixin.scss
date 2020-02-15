@@ -1,0 +1,23 @@
+@mixin clickable() {
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .3s ease 0s;
+}
+
+@mixin button() {
+    color: $color-white;
+    background-color: $color-blue-deep;
+    border-style: solid;
+    border-width: 1px;
+    border-color: $color-blue-deep;
+    border-radius: 1em;
+}
+
+@mixin button-inverted() {
+    color: $color-blue;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 1px;
+    border-color: $color-blue;
+    border-radius: 0.34em;
+}
