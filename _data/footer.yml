@@ -27,8 +27,12 @@ nav:
 
   - name: 帮助信息
     items:
-      - name: 怎样入保？
+      - name: 怎么入保？
         description: 解答您关于入保流程的问题
+        action: /
+        target: _self
+      - name: 怎么理赔？
+        description: 解答您关于理赔流程的问题
         action: /
         target: _self
       - name: 我的信息将会被如何使用？
