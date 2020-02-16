@@ -4,24 +4,6 @@
     transition: all .3s ease 0s;
 }
 
-@mixin button() {
-    color: $color-white;
-    background-color: $color-blue-deep;
-    border-style: solid;
-    border-width: 1px;
-    border-color: $color-blue-deep;
-    border-radius: 1em;
-}
-
-@mixin button-inverted() {
-    color: $color-blue;
-    background-color: transparent;
-    border-style: solid;
-    border-width: 1px;
-    border-color: $color-blue;
-    border-radius: 0.34em;
-}
-
 .link {
     @include clickable;
     color: $color-blue;
@@ -47,17 +29,27 @@
 }
 
 .button {
-    display: inline-block;
-    padding: 0 0.67em;
     @include clickable;
-    @include button;
+    display: inline-block;
+    padding: 0 .67em;
+    color: $color-white;
+    background-color: $color-blue;
+    border-style: solid;
+    border-width: 1px;
+    border-color: $color-blue;
+    border-radius: 0.34em;
 
-    &:hover,
-    &--inverted {
-        @include button-inverted;
+    &:hover {
+        color: $color-charcoal;
+        background-color: transparent;
+        border-color: $color-charcoal;
+        border-radius: 1em;
     }
 
-    &--inverted:hover {
-        @include button;
+    &--inverted {
+        color: $color-blue;
+        background-color: transparent;
+        border-color: $color-blue;
+        border-radius: 0.34em;
     }
 }

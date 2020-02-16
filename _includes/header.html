@@ -1,12 +1,12 @@
 <header class="header">
 <nav class="nav">
 <li class="nav__item nav__item--header">
-<a class="link link--logo link--inverted" title="{{ site.title }}" href="/" target="_self"><i class="icon-logo"></i></a>
+<a class="link link--logo link--inverted" href="/" target="_self"><i class="icon-logo"></i></a>
 </li>
 <li class="nav__space"></li>
 {% for item in site.data.header.nav %}
 <li class="nav__item nav__item--header {% if forloop.last %}nav--last{% endif %}">
-<a class="{{ item.type }} {{ item.type }}--inverted" title="{{ item.description }}" href="{{ item.url }}" target="{{ item.target }}">{{ item.name }}</a>
+<a class="{{ item.type }} {{ item.type }}--inverted" href="{{ item.url }}" target="{{ item.target }}">{{ item.name }}</a>
 </li>
 {% endfor %}
 </nav>

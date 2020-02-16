@@ -5,14 +5,14 @@
 <h4 class="nav__list__title">{{ category.name }}</h4>
 {% for item in category.items %}
 <li class="nav__item nav__item--footer">
-<a class="link link--inverted" href="{{ item.action }}" title="{{ item.description }}" target="{{ item.target }}">{{ item.name }}</a>
+<a class="link link--inverted" href="{{ item.action }}" target="{{ item.target }}">{{ item.name }}</a>
 </li>
 {% endfor %}
 </ul>
 {% endfor %}
 <li class="nav__space"></li>
 <li class="nav__item nav__item--footer nav__item--footer-logo nav--last">
-<a class="link link--logo" title="{{ site.title }}" href="/" target="_self"><i class="icon-logo"></i></a>
+<a class="link link--logo" href="/" target="_self"><i class="icon-logo"></i></a>
 </li>
 </nav>
 </footer>

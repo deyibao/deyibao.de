@@ -1,18 +1,15 @@
 nav:
   - type: link
     name: 保险产品
-    description: 我们的保险产品介绍
     action: /
     target: _self
 
   - type: link
     name: 关于我们
-    description: 了解我们的故事
     action: /
     target: _self
 
   - type: button
     name: 现在入保
-    description: 在线几步轻松搞定入保
     action: /
     target: _self

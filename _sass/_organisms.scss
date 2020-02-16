@@ -1,6 +1,7 @@
 .nav {
     display: flex;
     flex-direction: row;
+    @include padding-column;
 
     &__space {
         display: block;
@@ -44,23 +45,42 @@
     }
 }
 
+.hero {
+    @include height-responsive(46%);
+    @include padding-column(4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(/images/home-hero.jpg);
+    background-position: center;
+    background-size: cover;
+
+    &__content {
+        width: 43%;
+    }
+}
+
+.cta {
+    &__button {
+        @extend h3;
+    }
+}
+
 .header {
-    @include screen-width-responsive;
-    @include padding-column;
+    @include width-responsive;
     position: fixed;
-    background-color: $color-gray;
+    background-color: $color-white;
+    box-shadow: 0 2px 24px $color-gray;
 }
 
 .main {
-    @include screen-width-responsive;
-    @include padding-column;
+    @include width-responsive;
+    padding-top: 3.56em;
 }
 
 .footer {
-    @include screen-width-responsive;
-    @include padding-column;
+    @include width-responsive;
     @include padding-row;
-    background-color: $color-gray;
 }
 
 .alert-ie {

@@ -2,40 +2,32 @@ nav:
   - name: 了解德易保
     items:
       - name: 关于我们
-        description: 了解我们的故事
         action: /
         target: _self
       - name: 合作伙伴
-        description: 了解我们的合作伙伴
         action: /
         target: _self
       - name: 法律声明 (Impressum)
-        description: 法律声明及隐私协议
         action: /
         target: _self
 
   - name: 保险产品
     items:
       - name: 公立医疗险
-        description: 公立医疗险
         action: /
         target: _self
       - name: 第三方责任险
-        description: 第三方责任险
         action: /
         target: _self
 
   - name: 帮助信息
     items:
       - name: 怎么入保？
-        description: 解答您关于入保流程的问题
         action: /
         target: _self
       - name: 怎么理赔？
-        description: 解答您关于理赔流程的问题
         action: /
         target: _self
       - name: 我的信息将会被如何使用？
-        description: 解答关于您提供给我们的信息的使用问题
         action: /
         target: _self
