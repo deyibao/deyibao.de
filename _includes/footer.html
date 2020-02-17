@@ -4,15 +4,17 @@
 <ul class="nav__list">
 <h4 class="nav__list__title">{{ category.name }}</h4>
 {% for item in category.items %}
-<li class="nav__item nav__item--footer">
+<li class="nav__item">
 <a class="link link--inverted" href="{{ item.action }}" target="{{ item.target }}">{{ item.name }}</a>
 </li>
 {% endfor %}
 </ul>
 {% endfor %}
-<li class="nav__space"></li>
-<li class="nav__item nav__item--footer nav__item--footer-logo nav--last">
-<a class="link link--logo" href="/" target="_self"><i class="icon-logo"></i></a>
+<li class="nav__item nav__item--grow"></li>
+<li class="nav__item nav__item--logo nav__item--last">
+<a class="link" href="/" target="_self"><i class="icon-logo"></i></a>
 </li>
 </nav>
 </footer>
+<script src="/js/vendor/modernizr.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/blissfuljs/1.0.6/bliss.min.js"></script>

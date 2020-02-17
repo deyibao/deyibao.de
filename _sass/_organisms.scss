@@ -1,19 +1,16 @@
 .nav {
     display: flex;
     flex-direction: row;
-    @include padding-column;
-
-    &__space {
-        display: block;
-        flex-grow: 1;
-    }
+    flex-wrap: wrap;
+    @include column(padding, $x: 1.5);
 
     &__list {
         padding: 0;
-        margin-right: $space-column;
+        @include column(margin, right);
+        @include row(margin, bottom);
 
         &__title {
-            line-height: 2em;
+            @include row(margin, bottom, $x: .25);
         }
     }
 
@@ -21,33 +18,29 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-right: $space-column;
+        align-items: flex-start;
+        @include column(margin, right);
 
-        &--header {
-            @extend h3;
-            height: 2.67em;
+        &--grow {
+            flex-grow: 1;
         }
 
-        &--footer {
-            &-logo {
-                font-size: 1.34em;
-                justify-content: flex-start;
-            }
+        &--last {
+            margin-right: 0;
+        }
 
-            &:not(&-logo) > * {
-                line-height: 2em;
+        &--logo,
+        &--menu {
+            [class*="icon-"]:before {
+                font-size: inherit;
             }
         }
-    }
-
-    &--last {
-        margin-right: 0;
     }
 }
 
 .hero {
-    @include height-responsive(46%);
-    @include padding-column(4);
+    @include height(46%);
+    @include column(padding, $x: 3);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,20 +60,67 @@
 }
 
 .header {
-    @include width-responsive;
+    @include width;
     position: fixed;
     background-color: $color-white;
     box-shadow: 0 2px 24px $color-gray;
+
+    .nav__item {
+        @extend h3;
+        height: 4rem;
+        transition: all .3s ease 0s;
+
+        &--logo {
+            font-size: 2.25rem;
+        }
+
+        &--menu {
+            align-items: center;
+
+            @include media(min, min-width) {
+                > * { display: none; }
+            }
+        }
+
+        &--link {
+            @include media(min) {
+                display: none;
+                width: 100%;
+                order: 1;
+                align-items: center;
+            }
+        }
+
+        &--active {
+            display: flex;
+        }
+    }
 }
 
 .main {
-    @include width-responsive;
-    padding-top: 3.56em;
+    @include width;
+    padding-top: 4rem;
 }
 
 .footer {
-    @include width-responsive;
-    @include padding-row;
+    @include width;
+    @include row(padding);
+
+    .nav {
+        @include media(min) {
+            flex-direction: column;
+        }
+
+        &__item {
+            &--logo {
+                font-size: 2.25rem;
+            }
+
+            &--last {
+                justify-content: flex-start;
+            }
+        }
+    }
 }
 
 .alert-ie {

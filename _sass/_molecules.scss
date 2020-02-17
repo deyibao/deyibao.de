@@ -16,16 +16,6 @@
     &--inverted:hover {
         color: $color-blue;
     }
-
-    &--logo {
-        font-size: 1.5em;
-        line-height: 1em;
-
-        .icon-logo:before {
-            font-size: inherit;
-            width: auto;
-        }
-    }
 }
 
 .button {
