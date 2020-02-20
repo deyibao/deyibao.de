@@ -89,17 +89,12 @@ $space-column          : 2.5vw;
 $space-row             : 2rem;
 
 // Screen
-$screen-xlarge         : 2560px;
-$screen-large          : 1920px;
-$screen-medium         : 1280px;
-$screen-small          : 640px;
-$screen-large-xlarge   : ($screen-large + $screen-xlarge) / 2;
-$screen-medium-large   : ($screen-medium + $screen-large) / 2;
-$screen-small-medium   : ($screen-small + $screen-medium) / 2;
-$screen-max-breakpoint : $screen-medium;
-$screen-min-breakpoint : $screen-small;
+$screen-max-breakpoint : 1280px;
+$screen-mid-breakpoint : 1024px;
+$screen-min-breakpoint : 640px;
 $screen-breakpoints: (
     max: $screen-max-breakpoint,
+    mid: $screen-mid-breakpoint,
     min: $screen-min-breakpoint
 );
 

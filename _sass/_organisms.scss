@@ -38,27 +38,6 @@
     }
 }
 
-.hero {
-    @include height(46%);
-    @include column(padding, $x: 3);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-image: url(/images/home-hero.jpg);
-    background-position: center;
-    background-size: cover;
-
-    &__content {
-        width: 43%;
-    }
-}
-
-.cta {
-    &__button {
-        @extend h3;
-    }
-}
-
 .header {
     @include width;
     position: fixed;
@@ -68,15 +47,16 @@
     .nav__item {
         @extend h3;
         height: 4rem;
-        transition: all .3s ease 0s;
 
         &--logo {
             font-size: 2.25rem;
+            @include media(mid, max-width) {
+                font-size: 2rem;
+            }
         }
 
         &--menu {
             align-items: center;
-
             @include media(min, min-width) {
                 > * { display: none; }
             }
@@ -102,6 +82,48 @@
     padding-top: 4rem;
 }
 
+.hero {
+    &__image--intro {
+        background-image: url(/images/hero-intro.jpg);
+        @include media(min, min-width) {
+            > * { max-width: 50%; }
+        }
+    }
+
+    &__content,
+    &__background {
+        @include height(46%);
+        background-position: center;
+        background-size: cover;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        @include row(padding);
+        @include column(padding, $x: 3);
+        @include media(min) {
+            height: auto;
+            align-items: center;
+            background-image: none;
+        }
+    }
+
+    &__background {
+        @include media(min, min-width) {
+            display: none;
+        }
+    }
+}
+
+.cta {
+    &__button {
+        @extend h3;
+    }
+}
+
 .footer {
     @include width;
     @include row(padding);
@@ -114,6 +136,9 @@
         &__item {
             &--logo {
                 font-size: 2.25rem;
+                @include media(mid, max-width) {
+                    font-size: 2rem;
+                }
             }
 
             &--last {

@@ -1,12 +1,12 @@
 @mixin clickable() {
     text-decoration: none;
     cursor: pointer;
-    transition: all .3s ease 0s;
 }
 
 .link {
     @include clickable;
     color: $color-blue;
+    transition: color .3s;
 
     &:hover,
     &--inverted {
@@ -28,6 +28,7 @@
     border-width: 1px;
     border-color: $color-blue;
     border-radius: 0.34em;
+    transition: color .3s, background-color .3s, border-color .3s, border-radius .3s;
 
     &:hover {
         color: $color-charcoal;
