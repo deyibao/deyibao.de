@@ -82,6 +82,12 @@
     padding-top: 4rem;
 }
 
+.cta {
+    &__button {
+        @extend h3;
+    }
+}
+
 .hero {
     &__image--intro {
         background-image: url(/images/hero-intro.jpg);
@@ -118,9 +124,60 @@
     }
 }
 
-.cta {
-    &__button {
-        @extend h3;
+.banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    @include row(padding, $x: 3);
+    @include column(padding, $x: 3);
+    @include media(min) {
+        flex-direction: column;
+        @include row(padding);
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 40%;
+        @include media(min) {
+            width: auto;
+            @include row(margin, bottom);
+        }
+    }
+
+    &__image {
+        width: 60%;
+        @include column(padding, left, 2);
+        @include media(min) {
+            width: auto;
+            padding-left: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &--reversed {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        @include media(min) {
+            flex-direction: column;
+        }
+
+        .banner__image {
+            padding-left: 0;
+            @include column(padding, right, 2);
+            @include media(min) {
+                padding-right: 0;
+            }
+        }
+    }
+
+    &--gray {
+        background-color: $color-gray;
     }
 }
 
