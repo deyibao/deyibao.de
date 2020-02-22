@@ -35,6 +35,12 @@
       ]
     },
     {
+      "uid": "2d3be3e856fc1e4ac067590d2ded1b07",
+      "css": "plus",
+      "code": 61846,
+      "src": "fontawesome"
+    },
+    {
       "uid": "2846f411d2689c382f2ed65b41dba57f",
       "css": "logo",
       "code": 59392,

@@ -46,11 +46,12 @@
 
     .nav__item {
         @extend h3;
+        margin-bottom: 0;
         height: 4rem;
 
         &--logo {
             font-size: 2.25rem;
-            @include media(mid, max-width) {
+            @include media(mid) {
                 font-size: 2rem;
             }
         }
@@ -82,16 +83,10 @@
     padding-top: 4rem;
 }
 
-.cta {
-    &__button {
-        @extend h3;
-    }
-}
-
 .hero {
     &__image--intro {
         background-image: url(/images/hero-intro.jpg);
-        @include media(min, min-width) {
+        @include media(mid, min-width) {
             > * { max-width: 50%; }
         }
     }
@@ -110,15 +105,18 @@
         align-items: flex-start;
         @include row(padding);
         @include column(padding, $x: 3);
-        @include media(min) {
+        @include media(mid) {
             height: auto;
             align-items: center;
             background-image: none;
         }
+        @include media(min) {
+            @include column(padding, $x: 1.5);
+        }
     }
 
     &__background {
-        @include media(min, min-width) {
+        @include media(mid, min-width) {
             display: none;
         }
     }
@@ -130,9 +128,12 @@
     justify-content: flex-start;
     @include row(padding, $x: 3);
     @include column(padding, $x: 3);
-    @include media(min) {
+    @include media(mid) {
         flex-direction: column;
         @include row(padding);
+    }
+    @include media(min) {
+        @include column(padding, $x: 1.5);
     }
 
     &__content {
@@ -141,7 +142,7 @@
         justify-content: center;
         align-items: flex-start;
         width: 40%;
-        @include media(min) {
+        @include media(mid) {
             width: auto;
             @include row(margin, bottom);
         }
@@ -150,7 +151,7 @@
     &__image {
         width: 60%;
         @include column(padding, left, 2);
-        @include media(min) {
+        @include media(mid) {
             width: auto;
             padding-left: 0;
         }
@@ -163,14 +164,14 @@
     &--reversed {
         flex-direction: row-reverse;
         justify-content: flex-end;
-        @include media(min) {
+        @include media(mid) {
             flex-direction: column;
         }
 
         .banner__image {
             padding-left: 0;
             @include column(padding, right, 2);
-            @include media(min) {
+            @include media(mid) {
                 padding-right: 0;
             }
         }
@@ -181,12 +182,59 @@
     }
 }
 
+.cta {
+    &__button {
+        @extend h3;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: center;
+    background-color: $color-gray;
+    max-width: 320px;
+    padding: 1.75rem;
+    border-radius: .5rem;
+
+    &__title {
+        font-weight: bold;
+        line-height: 1em;
+        margin-bottom: .5rem;
+    }
+
+    &__subtitle {
+        display: block;
+        @include row(margin, bottom, .5);
+    }
+
+    &__description {
+        @include row(margin, bottom, .5);
+    }
+
+    &__highlights {
+        padding: 0;
+        @include row(margin, bottom, .75);
+        list-style-type: none;
+
+        .icon-plus:before {
+            @include column(margin, right, .25);
+            vertical-align: middle;
+        }
+    }
+
+    &__action {
+        align-self: center;
+    }
+}
+
 .footer {
     @include width;
     @include row(padding);
 
     .nav {
-        @include media(min) {
+        @include media(mid) {
             flex-direction: column;
         }
 
