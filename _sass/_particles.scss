@@ -3,13 +3,13 @@
     font-family: 'Noto Sans SC';
     font-style: normal;
     font-weight: normal;
-    src: url('../fonts/vendor/noto-sans-sc-v10-chinese-simplified-100.eot'); /* IE9 Compat Modes */
-    src: local('Noto Sans SC Thin'), local('NotoSansSC-Thin'),
-        url('../fonts/vendor/noto-sans-sc-v10-chinese-simplified-100.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('../fonts/vendor/noto-sans-sc-v10-chinese-simplified-100.woff2') format('woff2'), /* Super Modern Browsers */
-        url('../fonts/vendor/noto-sans-sc-v10-chinese-simplified-100.woff') format('woff'), /* Modern Browsers */
-        url('../fonts/vendor/noto-sans-sc-v10-chinese-simplified-100.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('../fonts/vendor/noto-sans-sc-v10-chinese-simplified-100.svg#NotoSansSC') format('svg'); /* Legacy iOS */
+    src: url('../fonts/vendor/noto-sans-sc-v10-chinese-simplified-300.eot'); /* IE9 Compat Modes */
+    src: local('Noto Sans SC Light'), local('NotoSansSC-Light'),
+        url('../fonts/vendor/noto-sans-sc-v10-chinese-simplified-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../fonts/vendor/noto-sans-sc-v10-chinese-simplified-300.woff2') format('woff2'), /* Super Modern Browsers */
+        url('../fonts/vendor/noto-sans-sc-v10-chinese-simplified-300.woff') format('woff'), /* Modern Browsers */
+        url('../fonts/vendor/noto-sans-sc-v10-chinese-simplified-300.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('../fonts/vendor/noto-sans-sc-v10-chinese-simplified-300.svg#NotoSansSC') format('svg'); /* Legacy iOS */
 }
 
 @font-face {
