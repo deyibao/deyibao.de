@@ -220,7 +220,6 @@
 
         .icon-plus:before {
             @include column(margin, right, .25);
-            vertical-align: middle;
         }
     }
 
