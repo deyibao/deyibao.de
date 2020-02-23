@@ -85,7 +85,7 @@
 
 .hero {
     &__image--intro {
-        background-image: url(/images/hero-intro.jpg);
+        background-image: url(/assets/images/hero-intro.jpg);
         @include media(mid, min-width) {
             > * { max-width: 50%; }
         }
