@@ -2,7 +2,7 @@ nav:
   - name: 了解德易保
     items:
       - name: 关于我们
-        action: /
+        action: /about
         target: _self
       - name: 合作伙伴
         action: /

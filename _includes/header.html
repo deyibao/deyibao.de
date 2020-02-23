@@ -8,7 +8,7 @@
 </li>
 {% for item in site.data.header.nav %}
 <li class="nav__item nav__item--{{ item.type }} {% if forloop.last %}nav__item--last{% endif %}">
-<a class="{{ item.type }} {{ item.type }}--inverted" href="{{ item.url }}" target="{{ item.target }}">{{ item.name }}</a>
+<a class="{{ item.type }} {{ item.type }}--inverted" href="{{ item.action }}" target="{{ item.target }}">{{ item.name }}</a>
 </li>
 {% endfor %}
 </nav>

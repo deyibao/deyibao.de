@@ -85,15 +85,20 @@
 
 .hero {
     &__image--intro {
+        @include height(46%);
         background-image: url(/assets/images/hero-intro.jpg);
         @include media(mid, min-width) {
             > * { max-width: 50%; }
         }
     }
 
+    &__image--about {
+        @include height(25%);
+        background-image: url(/assets/images/hero-about.jpg);
+    }
+
     &__content,
-    &__background {
-        @include height(46%);
+    &__image {
         background-position: center;
         background-size: cover;
     }
@@ -115,7 +120,11 @@
         }
     }
 
-    &__background {
+    &__content--header {
+        align-items: center;
+    }
+
+    &__image--backoff {
         @include media(mid, min-width) {
             display: none;
         }
@@ -179,6 +188,14 @@
 
     &--gray {
         background-color: $color-gray;
+    }
+}
+
+.content {
+    @include row(padding, $x: 1);
+    @include column(padding, $x: 3);
+    @include media(min) {
+        @include column(padding, $x: 1.5);
     }
 }
 

@@ -6,7 +6,7 @@ nav:
 
   - type: link
     name: 关于我们
-    action: /
+    action: /about
     target: _self
 
   - type: button
