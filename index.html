@@ -1,16 +1,17 @@
 ---
 layout: page_framed
-title: 德易保 ｜ 保险易，生活益
+title: 保险易，生活益
 ---
+{% include var/cta.liquid %}
 <section class="hero">
     <div class="hero__content hero__image--intro cta">
         <h1 class="cta__title">灵活便捷的保险</h1>
         <p class="cta__content">定制专属于您的保单内容，透明的全数字化入保流程，在线提交两步轻松搞定。</p>
-        <a class="cta__action button" href="/">现在入保</a>
+        <a class="cta__action button" href="{{ cta.action }}">{{ cta.name }}</a>
     </div>
     <div class="hero__image hero__image--backoff hero__image--intro"></div>
 </section>
-<section class="banner banner--reversed">
+<section id="products" class="banner banner--reversed">
     <div class="banner__content">
         <div class="card">
             <h3 class="card__title">公立医疗险</h3>

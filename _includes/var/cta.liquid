@@ -1,0 +1,2 @@
+{% assign _url = include.url | default: page.url %}
+{% assign cta = site.data.cta[_url] | default: site.data.cta['/'] %}

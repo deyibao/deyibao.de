@@ -1,15 +1,19 @@
+{% include var/cta.liquid %}
 <header class="header">
 <nav class="nav">
 <li class="nav__item nav__item--logo">
-<a class="link link--inverted" href="/" target="_self"><i class="icon-logo"></i></a>
+<a class="link link--inverted" href="/"><i class="icon-logo"></i></a>
 </li>
 <li class="nav__item nav__item--menu nav__item--grow">
 <a class="link link--inverted" onclick="$$('header .nav__item--link').forEach(e=>e.classList.toggle('nav__item--active'))"><i class="icon-menu"></i></a>
 </li>
-{% for item in site.data.header.nav %}
-<li class="nav__item nav__item--{{ item.type }} {% if forloop.last %}nav__item--last{% endif %}">
-<a class="{{ item.type }} {{ item.type }}--inverted" href="{{ item.action }}" target="{{ item.target }}">{{ item.name }}</a>
+{% for item in site.data.nav.header %}
+<li class="nav__item nav__item--link">
+<a class="link link--inverted" href="{{ item.action }}">{{ item.name }}</a>
 </li>
 {% endfor %}
+<li class="nav__item nav__item--button">
+<a class="button button--inverted" href="{{ cta.action }}">{{ cta.name }}</a>
+</li>
 </nav>
 </header>

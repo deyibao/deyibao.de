@@ -1,33 +1,32 @@
-nav:
+header:
+  - name: 关于我们
+    action: /about
+
+  - name: 入保帮助
+    action: /
+
+footer:
   - name: 了解德易保
     items:
       - name: 关于我们
         action: /about
-        target: _self
       - name: 合作伙伴
         action: /
-        target: _self
       - name: 法律声明 (Impressum)
         action: /
-        target: _self
 
   - name: 保险产品
     items:
       - name: 公立医疗险
         action: /
-        target: _self
       - name: 第三方责任险
         action: /
-        target: _self
 
   - name: 帮助信息
     items:
       - name: 怎么入保？
         action: /
-        target: _self
       - name: 怎么理赔？
         action: /
-        target: _self
       - name: 我的信息将会被如何使用？
         action: /
-        target: _self
