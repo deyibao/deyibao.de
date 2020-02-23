@@ -61,6 +61,7 @@ p {
 
 ul {
     @include column(padding, left);
+    @include row(margin, bottom, .375);
 }
 
 button {

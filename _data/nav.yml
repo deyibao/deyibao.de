@@ -18,7 +18,7 @@ footer:
   - name: 保险产品
     items:
       - name: 公立医疗险
-        action: /
+        action: /p/health-public
       - name: 第三方责任险
         action: /
 

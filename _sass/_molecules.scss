@@ -31,9 +31,9 @@
     transition: color .3s, background-color .3s, border-color .3s, border-radius .3s;
 
     &:hover {
-        color: $color-charcoal;
+        color: inherit;
         background-color: transparent;
-        border-color: $color-charcoal;
+        border-color: inherit;
         border-radius: 1em;
     }
 

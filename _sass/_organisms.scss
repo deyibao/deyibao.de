@@ -97,6 +97,15 @@
         background-image: url(/assets/images/hero-about.jpg);
     }
 
+    &__image--health-public {
+        @include height(46%);
+        color: $color-white;
+        background-image: url(/assets/images/hero-health-public.jpg);
+        @include media(mid, min-width) {
+            > * { max-width: 40%; }
+        }
+    }
+
     &__content,
     &__image {
         background-position: center;
@@ -111,6 +120,7 @@
         @include row(padding);
         @include column(padding, $x: 3);
         @include media(mid) {
+            color: inherit;
             height: auto;
             align-items: center;
             background-image: none;
